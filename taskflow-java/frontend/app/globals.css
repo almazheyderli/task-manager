@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=Figtree:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f5f0e8;
+  --paper2: #ede8dc;
+  --paper3: #e2dbd0;
+  --ink: #1a1714;
+  --ink2: #4a4540;
+  --ink3: #8a8480;
+  --rule: #d0c9be;
+  --rule2: #c0b9ae;
+  --red:    #c8373a;
+  --red-bg: rgba(200,55,58,0.08);
+  --amber:  #b5651d;
+  --amber-bg: rgba(181,101,29,0.1);
+  --green:  #2d6a4f;
+  --green-bg: rgba(45,106,79,0.1);
+  --blue:   #1a3a5c;
+  --blue-bg: rgba(26,58,92,0.08);
+  --accent: #c8373a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Figtree', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif  { font-family: 'Playfair Display', Georgia, serif; }
+.font-mono   { font-family: 'IBM Plex Mono', monospace; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--paper2); }
+::-webkit-scrollbar-thumb { background: var(--rule2); border-radius: 0; }
+
+::selection { background: rgba(200,55,58,0.15); color: var(--ink); }
