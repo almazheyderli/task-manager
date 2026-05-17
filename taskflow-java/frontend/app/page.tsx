@@ -266,7 +266,7 @@ export default function Home() {
           {/* top bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid var(--rule)' }}>
             <span className="font-mono" style={{ fontSize: 11, color: 'var(--ink3)', letterSpacing: '0.08em' }}>
-              TASKFLOW JAVA · v{APP_VERSION}
+               ALMAZ TASKFLOW JAVA · v{APP_VERSION}
             </span>
             <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
               <span style={{ fontSize: 13, color: 'var(--ink2)' }}>{user?.name}</span>
