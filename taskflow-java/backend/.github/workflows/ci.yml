@@ -19,4 +19,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Build project
-        run: mvn clean install
+        run: cd backend && mvn clean install
