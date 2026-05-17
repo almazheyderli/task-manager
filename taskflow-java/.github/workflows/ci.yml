@@ -19,4 +19,5 @@ jobs:
           distribution: 'temurin'
 
       - name: Build project
-        run: cd backend && mvn clean install
+        working-directory: ./backend
+        run: mvn clean install
