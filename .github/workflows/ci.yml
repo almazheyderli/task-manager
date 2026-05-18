@@ -14,7 +14,8 @@ jobs:
         working-directory: taskflow-java/backend
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -33,7 +34,8 @@ jobs:
         working-directory: taskflow-java/frontend
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -41,7 +43,7 @@ jobs:
           node-version: '20'
 
       - name: Install packages
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Frontend
         run: npm run build
