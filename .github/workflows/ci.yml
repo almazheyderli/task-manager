@@ -6,16 +6,15 @@ on:
       - main
 
 jobs:
-  build:
+  backend-build:
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: backend
+        working-directory: taskflow-java/backend
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -23,5 +22,26 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Build project
+      - name: Build Backend
         run: mvn clean install
+
+  frontend-build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: taskflow-java/frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install packages
+        run: npm install
+
+      - name: Build Frontend
+        run: npm run build
